@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  background: white;
+}
+.wrapper {
+  max-width: 1540px;
+  margin: 0 auto;
+}
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 50px 70px;
+}
+.nav-content {
+  max-width: 1540px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  font-size: 15px;
+  text-transform: lowercase;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar ul li a:hover {
+  border-bottom: 2px solid white;
+}
+.top-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+.slides {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+.discover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.inner {
+  max-width: 500px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 45px;
+  color: hsl(0, 0%, 0%);
+  margin: 0 0 25px;
+  font-weight: 700;
+}
+p {
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: hsl(0, 0%, 63%);
+  margin: 0;
+}
+.shop-btn {
+  background: none;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 13px;
+  color: hsl(0, 0%, 27%);
+  display: flex;
+  align-items: flex-start;
+  text-transform: uppercase;
+  max-width: 400px;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.shop-btn:hover {
+  color: hsl(0, 0%, 63%);
+}
+.shop-btn:hover img {
+  margin-left: 40px;
+}
+.shop-btn img {
+  margin-left: 20px;
+  height: 13px;
+  transition: all 0.3s ease;
+}
+.change {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: black;
+}
+.change button {
+  background: black;
+  border: none;
+  padding: 25px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.change button:hover {
+  background: hsl(0, 0%, 27%);
+}
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+.bottom-section img {
+  width: 100%;
+  height: 100%;
+}
+.bottom-section div {
+  padding: 50px 30px 0;
+}
+.bottom-section div h2 {
+  margin: 0 0 15px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.open,
+.close {
+  display: none;
+  width: 20px;
+  height: 18px;
+}
+.cover {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    max-width: 100%;
+  }
+  .navbar {
+    padding: 50px 30px;
+  }
+  .nav-content {
+    max-width: 800px;
+  }
+  .top-section {
+    grid-template-columns: 1fr;
+  }
+  .slide img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .change {
+    top: -78px;
+    left: auto;
+    right: 0;
+    bottom: auto;
+  }
+  .discover {
+    padding: 70px 30px;
+  }
+  .inner {
+    max-width: 800px;
+  }
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+  .bottom-section img {
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .bottom-section div {
+    padding: 50px 30px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .attribution {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .showNav {
+    left: 0 !important;
+  }
+  .show {
+    display: block;
+    z-index: 10000;
+  }
+  .cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
+  .navbar {
+    padding: 50px 20px;
+  }
+  .nav-content {
+    max-width: 350px;
+    justify-content: space-between;
+  }
+  .navbar ul {
+    position: absolute;
+    justify-content: flex-end;
+    top: 0;
+    width: 100%;
+    left: -100vh;
+    padding: 52px 20px;
+    margin: 0;
+    background: white;
+    transition: all 0.3s ease;
+  }
+  .navbar ul li a {
+    font-size: 16px;
+    margin: 0 0 0 25px;
+    border-bottom: 2px solid transparent;
+    color: black;
+  }
+  .navbar ul li a:hover {
+    border-bottom: 2px solid black;
+  }
+  .slides {
+    height: 400px;
+  }
+  .discover {
+    padding: 40px 20px;
+  }
+  .inner {
+    max-width: 350px;
+  }
+  h1 {
+    font-size: 30px;
+    margin: 0 0 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .shop-btn {
+    font-size: 14px;
+    letter-spacing: 10px;
+    margin-top: 30px;
+  }
+  .change {
+    top: -57.14px;
+    z-index: 10 !important;
+  }
+  .change button {
+    padding: 18px 25px;
+  }
+  .change button img {
+    width: 10px;
+  }
+  .bottom-section div {
+    padding: 30px 20px;
+  }
+  .bottom-section div h2 {
+    margin: 0 0 20px;
+    font-size: 15px;
+  }
+}
